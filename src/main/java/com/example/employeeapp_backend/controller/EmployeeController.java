@@ -17,16 +17,16 @@ public class EmployeeController {
 
 
     @GetMapping("/")
-    public String Employeewelcomepage()
+    public String EmployeeWelcomePage()
     {
         return "Welcome to my website";
     }
 
     @CrossOrigin(origins = "x")
     @PostMapping(path = "/add",consumes = "application/json",produces = "application/json")
-    public String Addemployee(@RequestBody Employee e)
+    public String AddEmployee(@RequestBody Employee e)
     {
-        System.out.println(e.getEmpname().toString());
+        System.out.println(e.getEmpName().toString());
         dao.save(e);
         return "Employee added successfully";
     }
