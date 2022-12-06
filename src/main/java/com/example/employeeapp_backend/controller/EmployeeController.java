@@ -1,14 +1,20 @@
 package com.example.employeeapp_backend.controller;
 
+import com.example.employeeapp_backend.dao.EmployeeDao;
 import com.example.employeeapp_backend.model.Employee;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 
 public class EmployeeController {
+
+    @Autowired
+    private EmployeeDao dao;
+
+
 
     @GetMapping("/")
     public String Employeewelcomepage()
@@ -16,12 +22,23 @@ public class EmployeeController {
         return "Welcome to my website";
     }
 
+    @CrossOrigin(origins = "x")
     @PostMapping(path = "/add",consumes = "application/json",produces = "application/json")
     public String Addemployee(@RequestBody Employee e)
     {
         System.out.println(e.getEmpname().toString());
+        dao.save(e);
         return "Employee added successfully";
     }
+
+    @CrossOrigin(origins = "x")
+    @GetMapping("/view")
+    public List<Employee> view()
+    {
+        return (List<Employee>) dao.findAll();
+    }
+
+
 
 
 
