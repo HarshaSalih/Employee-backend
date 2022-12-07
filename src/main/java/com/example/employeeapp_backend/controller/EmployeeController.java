@@ -16,11 +16,11 @@ public class EmployeeController {
 
 
 
-    @GetMapping("/")
-    public String EmployeeWelcomePage()
-    {
-        return "Welcome to my website";
-    }
+//    @GetMapping("/")
+//    public String EmployeeWelcomePage()
+//    {
+//        return "Welcome to my website";
+//    }
 
     @CrossOrigin(origins = "x")
     @PostMapping(path = "/add",consumes = "application/json",produces = "application/json")
