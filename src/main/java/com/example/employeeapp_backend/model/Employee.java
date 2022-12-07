@@ -11,11 +11,11 @@ public class Employee {
     @GeneratedValue (strategy = GenerationType.AUTO)
     private int id;
 
-    private int empCode;
-    private String empName;
+    private int empcode;
+    private String empname;
     private String designation;
     private int salary;
-    private String companyName;
+    private String companyname;
     private String mobile;
     private String username;
     private String password;
@@ -23,13 +23,13 @@ public class Employee {
     public Employee() {
     }
 
-    public Employee(int id, int empCode, String empName, String designation, int salary, String companyName, String mobile, String username, String password) {
+    public Employee(int id, int empcode, String empname, String designation, int salary, String companyname, String mobile, String username, String password) {
         this.id=id;
-        this.empCode = empCode;
-        this.empName = empName;
+        this.empcode = empcode;
+        this.empname = empname;
         this.designation = designation;
         this.salary = salary;
-        this.companyName = companyName;
+        this.companyname = companyname;
         this.mobile = mobile;
         this.username = username;
         this.password = password;
@@ -43,20 +43,20 @@ public class Employee {
         this.id = id;
     }
 
-    public int getEmpCode() {
-        return empCode;
+    public int getEmpcode() {
+        return empcode;
     }
 
-    public void setEmpCode(int empCode) {
-        this.empCode = empCode;
+    public void setEmpcode(int empcode) {
+        this.empcode = empcode;
     }
 
-    public String getEmpName() {
-        return empName;
+    public String getEmpname() {
+        return empname;
     }
 
-    public void setEmpName(String empName) {
-        this.empName = empName;
+    public void setEmpname(String empname) {
+        this.empname = empname;
     }
 
     public String getDesignation() {
@@ -75,12 +75,12 @@ public class Employee {
         this.salary = salary;
     }
 
-    public String getCompanyName() {
-        return companyName;
+    public String getCompanyname() {
+        return companyname;
     }
 
-    public void setCompanyName(String companyname) {
-        this.companyName = companyname;
+    public void setCompanyname(String companyname) {
+        this.companyname = companyname;
     }
 
     public String getMobile() {
